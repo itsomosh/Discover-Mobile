@@ -1,0 +1,35 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page">
+    <ActionBar title="Search Results" class="action-bar">
+        <NavigationButton text="Back" android.systemIcon="ic_menu_back" />
+    </ActionBar>
+    <GridLayout rows="auto, auto, *, auto">
+        <!-- Search bar -->
+        <SearchBar row="0" hint="Search..." text="{{ searchQuery }}" submit="{{ onSearch }}" class="m-b-10" />
+
+        <!-- Filters and sorting -->
+        <GridLayout row="1" columns="*, *" class="m-b-10">
+            <Button col="0" text="Filters" tap="{{ showFilters }}" class="-outline" />
+            <Button col="1" text="{{ sortButtonText }}" tap="{{ showSortOptions }}" class="-outline" />
+        </GridLayout>
+
+        <!-- Results list -->
+        <ListView row="2" items="{{ results }}" itemTap="{{ onResultTap }}" class="list-group">
+            <ListView.itemTemplate>
+                <GridLayout columns="auto, *" class="list-group-item p-10">
+                    <Image col="0" src="{{ image }}" width="50" height="50" class="rounded-full m-r-10" />
+                    <StackLayout col="1">
+                        <Label text="{{ name }}" class="h2" />
+                        <Label text="{{ description }}" textWrap="true" class="body" />
+                    </StackLayout>
+                </GridLayout>
+            </ListView.itemTemplate>
+        </ListView>
+
+        <!-- Pagination -->
+        <GridLayout row="3" columns="auto, *, auto" class="p-10">
+            <Button col="0" text="Previous" tap="{{ onPreviousPage }}" isEnabled="{{ hasPreviousPage }}" class="-outline" />
+            <Label col="1" text="{{ paginationInfo }}" class="text-center" />
+            <Button col="2" text="Next" tap="{{ onNextPage }}" isEnabled="{{ hasNextPage }}" class="-outline" />
+        </GridLayout>
+    </GridLayout>
+</Page>

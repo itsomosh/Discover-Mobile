@@ -1,0 +1,9 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page">
+    <ActionBar title="Login" class="action-bar" />
+    <StackLayout class="p-4">
+        <TextField hint="Email" text="{{ email }}" keyboardType="email" autocorrect="false" autocapitalizationType="none" class="m-b-10" />
+        <TextField hint="Password" text="{{ password }}" secure="true" class="m-b-10" />
+        <Button text="Login" tap="{{ login }}" class="-primary m-b-10" />
+        <Button text="Sign Up" tap="{{ signUp }}" class="-outline" />
+    </StackLayout>
+</Page>

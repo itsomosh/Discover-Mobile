@@ -1,0 +1,8 @@
+{
+  "name": "discover-diani-landing",
+  "version": "1.0.0",
+  "description": "Landing page for Discover Diani mobile app",
+  "scripts": {
+    "build": "echo 'No build step required'"
+  }
+}

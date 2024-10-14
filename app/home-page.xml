@@ -1,0 +1,14 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page">
+    <ActionBar title="Discover Diani" class="action-bar" />
+    <ScrollView>
+        <StackLayout class="p-4">
+            <Label text="Welcome to Discover Diani" class="h1 text-center m-b-30" />
+            <SearchBar hint="Search for places, activities, events..." submit="{{ onSearch }}" class="m-b-20" />
+            <Button text="Properties" tap="{{ onCategoryTap }}" class="-primary m-b-10" />
+            <Button text="Services" tap="{{ onCategoryTap }}" class="-primary m-b-10" />
+            <Button text="Activities" tap="{{ onCategoryTap }}" class="-primary m-b-10" />
+            <Button text="Events" tap="{{ onCategoryTap }}" class="-primary m-b-10" />
+            <Button text="Rentals" tap="{{ onCategoryTap }}" class="-primary m-b-10" />
+        </StackLayout>
+    </ScrollView>
+</Page>
